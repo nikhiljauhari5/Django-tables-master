@@ -6,15 +6,14 @@ from .models import Event
 
 def all_events(request):
      event_list = Event.objects.all()
-     return render(request, 'events/event_list.html',
+     return render(request, 
+     'events/event_list.html',
      {
          'event_list':event_list,
 
      })
-    
 
-
-# Create your views here.
+  # Create your views here.
 def home(request, year, month):
     name = "John"
     month = month.capitalize()
@@ -40,5 +39,6 @@ def home(request, year, month):
             "month": month,
             "month_number": month_number,
             "cal": cal,  
-            "current_year" : current_year,
-        })
+            "current_year" : currxent_year,
+            "time" : time,
+        })   
