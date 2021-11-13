@@ -18,8 +18,6 @@ MarkupSafe==2.0.1
 packaging==21.0
 pipwin==0.5.1
 pyjsparser==2.7.1
-pyobjc==7.3
-pyobjc-core==7.3
 pyobjc-framework-Accounts==7.3
 pyobjc-framework-AddressBook==7.3
 pyobjc-framework-AdSupport==7.3
