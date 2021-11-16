@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import calendar
 from calendar import HTMLCalendar
-from datetime import datetime, time
+from datetime import datetime 
 from .models import Event
 
 def all_events(request):
@@ -13,12 +13,12 @@ def all_events(request):
 
      })
 
-  # Create your views here.
-def home(request, year, month):
+# Create your views here.
+def home(request, year, month): #year=datetime.now.year, month=datetime.now.month
     name = "John"
     month = month.capitalize()
     #convert month from name to number
-    month_number = list(Calendar.month_name).index(month)
+    month_number = list(calendar.month_name).index(month)
     month_number = int(month_number)
 
     #create a calender
@@ -31,14 +31,14 @@ def home(request, year, month):
     current_year = now.year
 
     #get current time
-    time.now.strftime('%I:%M'%p)
-    return render(request, 'events/home.html', 
-        {
+    time = now.strftime('%I:%M %p')
+    return render(request,
+            'events/home.html', {
             "name": name,
             "year": year,
             "month": month,
             "month_number": month_number,
             "cal": cal,  
-            "current_year" : currxent_year,
+            "current_year" : current_year,
             "time" : time,
-        })   
+            })   
